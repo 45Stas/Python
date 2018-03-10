@@ -2,10 +2,12 @@
 def main():
     sum=0
     count =int(input("Скоко бумажек у тебя в кошельке"))
+    money = 0
     for i in range(1, count + 1, 1):
         money = int(input("Какая цифарка на бумажке"))
-        if proverka(money) == True:
+        while proverka(money) != True:
             sum+=money
+         
         result(sum)
 
 
