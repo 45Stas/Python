@@ -1,26 +1,21 @@
-
-def main():
-    sum=0
-    count =int(input("Скоко бумажек у тебя в кошельке"))
-    money = 0
-    for i in range(1, count + 1, 1):
-        money = int(input("Какая цифарка на бумажке"))
-        while proverka(money) != True:
-            sum+=money
-         
-        result(sum)
-
-
+def spisok():
+    b = ["Никита", "Кирилл", "Диасдастан", "Елена", "Катя", "Стас", "Рома", "Еркебулан", "Влад"]
+    c = [i * 1 for i in range(1, 9+1)]
+    d = [i * 1.5 for i in range(1, 9+1)]
+    t = input("Номер Ученика:")
+    try:
+         t = int(t)
+         print(b[t-1])
+         print(c[t-1])
+         print(d[t-1])
+    except:
+        for i in range(1, 9+1):
+            if t == b[i-1]:
+                print(b[i-1])
+                print(c[i-1])
+                print(d[i-1])
         
-def proverka(money):
-    if money == 200 or money == 500 or money == 1000 or money == 2000 or money == 5000 or money == 10000 or money == 20000:
-        return True
-    else:
-        print("Ща полисию вызову")
-        return False
-def result(suma):
-    print(suma)
     
-    
-main()
+spisok()
+
 
